@@ -9,17 +9,33 @@
 <body>
     <div class="container">
         <h1 class="text-center mt-5">Login/Signup</h1>
-        <form class="mt-5" action="{{ url_for('login_signup') }}" method="post">
+        
+        <form class="mt-5" action="{{ url_for('login') }}" method="post">
+            <h2>Login</h2>
             <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <label for="login-email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="login-email" name="email" placeholder="name@example.com">
             </div>
             <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password">
+                <label for="login-password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="login-password" name="password" placeholder="Password">
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+
+        <form class="mt-5" action="{{ url_for('signup') }}" method="post">
+            <h2>Signup</h2>
+            <div class="mb-3">
+                <label for="signup-email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="signup-email" name="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="signup-password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="signup-password" name="password" placeholder="Password">
+            </div>
+            <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-secondary">Signup</button>
             </div>
         </form>
